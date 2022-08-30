@@ -18,22 +18,18 @@ int main() {
 
         string productos[n][2];
 
-        if(n != 0 && n <= maximo){
-            //llenar el arreglo
-            cout<<"Digite el nombre y el peso del articulo:"<<endl;
-            for(int i=0; i<n; i++) {
-                for(int j=0; j<2; j++) {
-                    cout<<"Digite un elemento ["<<i<<"]["<<j<<"]: "<<endl;
-                    cin>>productos[i][j];
-                }
-            }
-        }else{
+        if(n == 0 || n > maximo){
             cout<<"No se registro ningun elemento, el numero introducido no es valido"<<endl;
             return 0;
         }
-
         //calcular el precio dependiendo del peso
         for(int i=0;i<n;i++){
+            cout<<"Digite el nombre y el peso del articulo:"<<endl;
+            for(int j=0; j<2; j++) {
+                cout<<"Digite un elemento ["<<i<<"]["<<j<<"]: "<<endl;
+                cin>>productos[i][j];
+            }
+
             float cambio = stof(productos[i][1]);
             float precio = cambio * 10;
 
