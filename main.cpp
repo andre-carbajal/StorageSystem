@@ -64,7 +64,7 @@ int main() {
         }
 
         do {
-            cout<<"¿Desea añadir mas articulos? si(s) o no (n)"<<endl;
+            cout<<"¿Desea agregar mas articulos? si(s) o no (n)"<<endl;
             cin>>opcion;
 
             if (opcion == "n" || opcion == "N"){
