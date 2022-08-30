@@ -38,23 +38,17 @@ int main() {
             float precio = cambio * 10;
 
             //sacarle el mantenimiento al producto
-            if (precio<10) {
+            if (precio<10)
                 mantenimiento=0;
-            } else {
-                if (precio>=10 && precio<=35) {
-                    mantenimiento = precio*0.20;
-                } else {
-                    if (precio>=36 && precio<=55) {
-                        mantenimiento = precio*0.28;
-                    } else {
-                        if (precio>=56 && precio<=100) {
-                            mantenimiento = precio*0.45;
-                        } else {
-                            mantenimiento = precio*0.6;
-                        }
-                    }
-                }
-            }
+            else if (precio>=10 && precio<=35)
+                mantenimiento = precio*0.20;
+            else if (precio>=36 && precio<=55)
+                mantenimiento = precio*0.28;
+            else if (precio>=56 && precio<=100)
+                mantenimiento = precio*0.45;
+            else
+                mantenimiento = precio*0.6;
+
             productos[i][1] = to_string(round(mantenimiento+precio));
         }
 
