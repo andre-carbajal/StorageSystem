@@ -1,20 +1,24 @@
 #include<iostream>
 #include<cmath>
+#include<string>
 using namespace std;
 
 int main() {
+    const int maximo = 100;
     int n = 0;
     float mantenimiento;
     string opcion;
 
     do {
         //numero de elementos para el arreglo
-        cout << "Digite el numero de productos a registrar(maximo 100): "<<endl;
+        cout << "SISTEMA DE INVENTARIO" << "\n";
+        cout << "---------------------" << "\n";
+        cout << "Digite el numero de productos a registrar (max " << maximo << " )...: " << endl;
         cin >> n;
 
         string productos[n][2];
 
-        if(n != 0 && n <= 100){
+        if(n != 0 && n <= maximo){
             //llenar el arreglo
             cout<<"Digite el nombre y el peso del articulo:"<<endl;
             for(int i=0; i<n; i++) {
@@ -70,7 +74,7 @@ int main() {
             cin>>opcion;
 
             if (opcion == "n" || opcion == "N"){
-                cout<<"No se va a ingresar mas datos. Fin"<<endl;
+                cout << "Termino del programa" << endl;
                 return 0;
             }else if (opcion != "s" && opcion != "S"){
                 cout<<"Dijito no valido"<<endl;
