@@ -23,8 +23,9 @@ int main() {
             return 0;
         }
         //calcular el precio dependiendo del peso
+        cout << endl << "INGRESO DE PRODUCTOS" << endl;
         for(int i=0;i<n;i++){
-            cout<<"Digite el nombre y el peso del articulo:"<<endl;
+            cout<<"\n" << "Producto " << i+1 << endl;
             for(int j=0; j<2; j++) {
                 cout<<"Digite un elemento ["<<i<<"]["<<j<<"]: "<<endl;
                 cin>>productos[i][j];
@@ -48,7 +49,7 @@ int main() {
             productos[i][1] = to_string(round(mantenimiento+precio));
         }
 
-        cout<<"El nombre y el precio final a pagar por el articulo es: "<<endl;
+        cout <<endl <<"El nombre y el precio final a pagar por el articulo es...: "<<endl;
 
         //mostrar el arreglo
         for(int i=0; i<n; i++) {
