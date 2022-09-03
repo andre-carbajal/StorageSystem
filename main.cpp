@@ -70,7 +70,7 @@ int main() {
                 cout << "Termino del programa" << endl;
                 return 0;
             }else if (opcion != "s" && opcion != "S"){
-                cout<<"Dijito no valido"<<endl;
+                cout<<"Dijito no valido, intentelo de nuevo..."<<endl;
             }
         } while (opcion != "s" && opcion != "S");
 
