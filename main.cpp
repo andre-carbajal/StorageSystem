@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+
     const int maximo = 100;
     int n = 0;
     float mantenimiento;
@@ -22,12 +23,13 @@ int main() {
             cout<<"No se registro ningun elemento, el numero introducido no es valido"<<endl;
             return 0;
         }
+
         //calcular el precio dependiendo del peso
         cout << endl << "INGRESO DE PRODUCTOS" << endl;
         for(int i=0;i<n;i++){
             cout<<"\n" << "Producto " << i+1 << endl;
             for(int j=0; j<2; j++) {
-                cout<<"Digite un elemento ["<<i<<"]["<<j<<"]: "<<endl;
+                cout<<"Digite los elementos ["<<i<<"]["<<j<<"]: "<<endl;
                 cin>>productos[i][j];
             }
 
